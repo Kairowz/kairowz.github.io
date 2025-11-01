@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WZ SERVICES — Downloads</title>
+  <link rel="icon" href="favicon.ico">
+  <style>
+:root{--bg:#0b0d10;--panel:#0f141b;--muted:#a9b6c7;--txt:#e8eef6;--accent:#00c8ff;--br:#1d2733}
+*{box-sizing:border-box}html,body{margin:0;padding:0;background:var(--bg);color:var(--txt);font:16px/1.6 Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:980px;margin:0 auto;padding:24px}
+header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;gap:16px}
+.brand{font-weight:800;letter-spacing:.4px}
+.langs{display:flex;gap:10px;color:var(--muted);font-size:14px;flex-wrap:wrap}
+.card{background:var(--panel);border:1px solid var(--br);border-radius:14px;padding:20px;box-shadow:0 6px 24px rgba(0,0,0,.35)}
+h1{font-size:28px;margin:6px 0 12px}h2{font-size:20px;margin:18px 0 8px}
+hr{border:0;border-top:1px solid var(--br);margin:14px 0}
+.notice{background:#0f1824;border:1px dashed #2a3b52;padding:14px;border-radius:12px;color:var(--muted)}
+.btn{display:inline-block;background:#0e7490;color:#fff;padding:10px 14px;border-radius:10px;border:1px solid #1a9dbc;transition:.2s}
+.btn:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.tool{border:1px solid var(--br);border-radius:12px;padding:14px;background:#0f141b}
+.tool h3{margin:0 0 8px 0}
+.tool p{margin:0 0 10px 0;color:var(--muted)}
+.small{font-size:13px;color:var(--muted)}
+.back{font-size:14px;color:var(--muted)}
+.tag{display:inline-flex;gap:6px;align-items:center;padding:4px 10px;border-radius:999px;background:#0e1622;border:1px solid #203044;color:#b9cbe0;font-size:13px}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">WZ SERVICES — DOWNLOADS</div>
+      <nav class="langs">ENGLISH · FRANÇAIS · DEUTSCH · РУССКИЙ · ESPAÑOL · 中文</nav>
+    </header>
+
+    <div class="card">
+      <p class="back"><a href="index.html">Back to Guide</a></p>
+      <h1>Software Downloads</h1>
+      <p>Select your game to view available loaders</p>
+
+      <h2>Game Loaders</h2>
+      <div id="game-loaders" class="grid"></div>
+
+      <h2>Additional Tools</h2>
+      <div class="grid">
+        <div class="tool">
+          <h3>DControl</h3>
+          <p>Windows Defender Disabler</p>
+          <p><a class="btn" href="https://drive.usercontent.google.com" target="_blank" rel="noopener">Download</a></p>
+        </div>
+        <div class="tool">
+          <h3>C++ Redistributable</h3>
+          <p>Required to use our tools</p>
+          <p><a class="btn" href="https://api.cloud.anewvision.fr" target="_blank" rel="noopener">Download</a></p>
+        </div>
+      </div>
+
+      <p style="margin-top:14px;">
+        <a class="btn" href="index.html">Back to Games</a>
+      </p>
+    </div>
+
+    <p class="small">Replace the download links below by editing the data object inside this file.</p>
+
+    <script>
+      // === EDIT HERE: your loader buttons & links ===
+      const LOADERS = [
+        { title: "BO6 — Loader", note: "Latest", url: "https://your-link-here/bo6.exe" },
+        { title: "FC 26 — Loader", note: "New build", url: "https://your-link-here/fc26.exe" },
+        { title: "Rust — Loader", note: "Stable", url: "https://your-link-here/rust.exe" },
+        { title: "R6 — Loader", note: "v1.2", url: "https://your-link-here/r6.exe" }
+      ];
+      // ==============================================
+
+      const root = document.getElementById('game-loaders');
+      LOADERS.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'tool';
+        card.innerHTML = `
+          <h3>${item.title}</h3>
+          <p>${item.note || ''}</p>
+          <p><a class="btn" href="${item.url}" target="_blank" rel="noopener">Download</a></p>
+        `;
+        root.appendChild(card);
+      });
+    </script>
+  </div>
+</body>
+</html>
