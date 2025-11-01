@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WZ SERVICES — Configuration Guide</title>
+  <link rel="icon" href="favicon.ico">
+  <style>
+    :root { --bg:#0b0d10; --card:#12161c; --text:#e8eef5; --muted:#9fb0c3; --accent:#00d0ff; --border:#1f2630; }
+    * { box-sizing: border-box; }
+    html, body { margin:0; padding:0; background:var(--bg); color:var(--text); font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 24px; }
+    header { display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom: 18px; }
+    .brand { display:flex; align-items:center; gap:12px; font-weight:700; letter-spacing:.5px; }
+    .logo { width:28px; height:28px; border-radius:8px; background:linear-gradient(135deg,#0af,#6ff); box-shadow: 0 0 0 1px #0af2 inset; }
+    .langs { display:flex; gap:10px; color: var(--muted); font-size: 14px; flex-wrap: wrap; }
+    .card { background: var(--card); border:1px solid var(--border); border-radius:16px; padding:20px; box-shadow: 0 6px 24px rgba(0,0,0,.35); }
+    h1 { font-size: 28px; margin: 6px 0 12px; }
+    h2 { font-size: 20px; margin: 20px 0 8px; }
+    .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:16px; }
+    .btn { display:inline-block; background:#0e7490; color:white; padding:10px 14px; border-radius:10px; border:1px solid #1a9dbc; transition:.2s; }
+    .btn:hover { filter:brightness(1.1); transform: translateY(-1px); }
+    .notice { background:#1a2230; border:1px dashed #30435a; padding:14px; border-radius:12px; color:var(--muted); }
+    footer { color: var(--muted); font-size:13px; margin-top:24px; }
+    .stepper { display:flex; gap:10px; align-items:center; font-weight:600; color:#9adfff; }
+    .tag { display:inline-flex; align-items:center; gap:6px; padding:4px 10px; border-radius:999px; background:#0e1622; border:1px solid #203044; color:#b9cbe0; font-size:13px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand"><div class="logo"></div> <span>WZ SERVICES — GUIDE</span></div>
+      <nav class="langs">EN · FR · DE · RU · ES · 中文</nav>
+    </header>
+
+    <div class="card">
+      <h1>Select Your Game</h1>
+      <p>Choose the game you want to configure.</p>
+      <div class="grid">
+        <div class="tag">BO6</div>
+        <div class="tag">FC 26</div>
+        <div class="tag">Battlefield</div>
+        <div class="tag">Fortnite</div>
+        <div class="tag">Valorant</div>
+        <div class="tag">R6</div>
+        <div class="tag">Rust</div>
+      </div>
+
+      <h2>Game Guides</h2>
+      <p>Select a guide or troubleshooting option.</p>
+
+      <h2>Crash Issues</h2>
+      <p>Troubleshooting guides for common crash and error issues.</p>
+
+      <div class="stepper" style="margin:14px 0 6px;">Step 1 of 6 <span class="tag">01</span></div>
+      <h2>Step Title</h2>
+      <p>Step description…</p>
+      <p><a class="btn" href="#" onclick="alert('Visual guide placeholder')">View Visual Guide</a></p>
+
+      <div class="notice">
+        <strong>IMPORTANT NOTICE</strong><br>
+        You must complete the <em>GLOBAL GUIDE</em> before selecting any product. Products do not include the guide inside — they only explain how to use them after setup. Make sure to follow the GLOBAL GUIDE first to avoid errors or issues.
+      </div>
+
+      <p style="margin-top:16px;">
+        <a class="btn" href="downloads.html">Go to Downloads</a>
+      </p>
+    </div>
+
+    <footer>© WZ Services • Unofficial mirrored layout inspired by the public page you shared.</footer>
+  </div>
+</body>
+</html>
